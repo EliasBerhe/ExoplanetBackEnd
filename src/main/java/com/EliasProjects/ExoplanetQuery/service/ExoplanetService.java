@@ -15,26 +15,12 @@ public class ExoplanetService implements ExoplanetRepoInterface {
 
     @Autowired
     private ExoplanetRepo repo;
-    private List<String> discoveryYear;
-    private List<String> hostName;
-    private List<String> discoveryFaculty;
 
-    public List<String> getDiscoveryYear() {
-        return discoveryYear;
-    }
 
-    public List<String> getHostName() {
-        return hostName;
-    }
 
-    public List<String> getDiscoveryFaculty() {
-        return discoveryFaculty;
-    }
 
     public ExoplanetService(){
-        this.discoveryYear  =new ArrayList<>();
-        this.discoveryFaculty  =new ArrayList<>();
-        this.hostName  =new ArrayList<>();
+
 
         }
     @Override
@@ -75,7 +61,7 @@ public class ExoplanetService implements ExoplanetRepoInterface {
                             exoplanet.setPlanet(index);
                         }
                         else if(count==1){
-                            this.hostName.add(index);
+
                             exoplanet.setHostName(index);
                         }
                         else if(count==3){
@@ -91,11 +77,11 @@ public class ExoplanetService implements ExoplanetRepoInterface {
                         }
 
                         else if(count==6){
-                            this.discoveryYear.add(index);
+
                             exoplanet.setDiscoverYear(index);
                         }
                         else if(count==7){
-                            this.discoveryFaculty.add(index);
+
                             exoplanet.setDiscoveryFaculty(index);
 
                         }
@@ -127,10 +113,5 @@ public class ExoplanetService implements ExoplanetRepoInterface {
         }
     }
 
-    public static void main(String args[]){
-            ExoplanetService x = new ExoplanetService();
 
-
-
-    }
 }
